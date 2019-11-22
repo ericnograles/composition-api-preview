@@ -1,5 +1,5 @@
 <template>
-  <div class="c-home container mx-auto flex">
+  <div class="container mx-auto flex flex-col items-center">
     <img alt="Vue logo" src="../assets/logo.png" class="block object-center" />
     <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
@@ -16,10 +16,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.c-home {
-  flex-direction: column;
-  align-items: center;
-}
-</style>
