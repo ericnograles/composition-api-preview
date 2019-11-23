@@ -1,0 +1,82 @@
+<template>
+  <div>
+    <slot :state="state" :actions="actions" />
+  </div>
+</template>
+
+<script>
+import Vue from 'vue'
+import { getMemes, addMeme, removeMeme } from '../mocks/repositoryMeme'
+
+export default Vue.extend({
+  name: 'MemesProvider',
+  data() {
+    return {
+      items: [],
+      errors: {
+        add: null,
+        remove: null,
+        list: null
+      },
+      loading: false
+    }
+  },
+  created() {
+    console.log('[MemesProvider]: Created')
+  },
+  computed: {
+    state() {
+      return {
+        items: this.items,
+        errors: this.errors,
+        loading: this.loading
+      }
+    },
+    actions() {
+      return {
+        list: this.list,
+        add: this.add,
+        remove: this.remove
+      }
+    }
+  },
+  methods: {
+    async list() {
+      console.log('[HOC]: list')
+      try {
+        this.loading = true
+        const { items } = await getMemes()
+        this.items = items
+      } catch (err) {
+        this.errors.list = err
+      } finally {
+        this.loading = false
+      }
+    },
+    async add(obj) {
+      console.log('[HOC]: add')
+      try {
+        this.loading = true
+        const { items } = await addMeme(obj)
+        this.items = items
+      } catch (err) {
+        this.errors.add = err
+      } finally {
+        this.loading = false
+      }
+    },
+    async remove(id) {
+      console.log('[HOC]: remove')
+      try {
+        this.loading = true
+        const { items } = await removeMeme(id)
+        this.items = items
+      } catch (err) {
+        this.errors.remove = err
+      } finally {
+        this.loading = false
+      }
+    }
+  }
+})
+</script>

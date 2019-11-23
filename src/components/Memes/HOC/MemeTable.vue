@@ -1,20 +1,19 @@
 <template>
-  <div class="c-meme-table">
-    <button @click="addMeme">Add</button>
-  </div>
+  <memes-provider v-slot="{ state, actions }">
+    <div class="c-meme-table">
+      <button @click="actions.add">Add</button>
+    </div>
+  </memes-provider>
 </template>
 
 <script>
 import Vue from 'vue'
-import useMemeRepository from './useMemeRepository'
+import MemesProvider from './MemesProvider'
 
-const MemeTable = Vue.extend({
+export default Vue.extend({
   name: 'MemeTable',
-  props: {
-    addMeme: {
-      type: Function,
-      required: true
-    }
+  components: {
+    MemesProvider
   },
   data() {
     return {
@@ -22,12 +21,9 @@ const MemeTable = Vue.extend({
     }
   },
   created() {
-    console.log('[Component]: Created')
+    console.log('[MemeTable]: Created')
   }
 })
-
-const MemeTableWithRepository = useMemeRepository(MemeTable)
-export default MemeTableWithRepository
 </script>
 
 <style lang="scss" scoped>
