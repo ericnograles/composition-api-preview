@@ -1,7 +1,7 @@
 <template>
-  <memes-provider v-slot="{ state, actions }">
+  <memes-provider v-slot="memesProvider">
     <div class="c-meme-table">
-      <button @click="actions.add">Add</button>
+      <button @click="memesProvider.actions.add">Add</button>
     </div>
   </memes-provider>
 </template>
