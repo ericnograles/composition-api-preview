@@ -2,11 +2,30 @@
   <div class="c-meme-table"></div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<script>
+import { reactive } from '@vue/composition-api'
+import { createComponent } from '@vue/composition-api'
+import useMemeRepository from './features/useMemeRepository'
+import useTwitterService from './features/useTwitterService'
 
-export default Vue.extend({
-  name: 'MemeTable'
+export default createComponent({
+  name: 'MemeTable',
+  setup() {
+    const state = reactive({
+      pageLoading: false
+    })
+    const memeRepository = useMemeRepository()
+    const twitterService = useTwitterService()
+
+    return {
+      state,
+      memeRepository,
+      twitterService
+    }
+  },
+  created() {
+    console.log('[MemeTable]: Created')
+  }
 })
 </script>
 

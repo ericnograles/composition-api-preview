@@ -7,14 +7,14 @@
 <script>
 import MemeTableHOC from '@/components/MemeTable/HOC/MemeTable'
 import MemeTableMixin from '@/components/MemeTable/Mixin/MemeTable'
-import MemeTableComposition from '@/components/MemeTable/Mixin/MemeTable'
+import MemeTableComposition from '@/components/MemeTable/Composition/MemeTable'
 
 export default {
   name: 'TableView',
   components: {
     // MemeTable: MemeTableHOC
-    MemeTable: MemeTableMixin
-    // MemeTable: MemeTableComposition
+    // MemeTable: MemeTableMixin
+    MemeTable: MemeTableComposition
   }
 }
 </script>
