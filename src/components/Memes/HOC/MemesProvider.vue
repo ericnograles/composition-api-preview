@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue'
-import { getMemes, addMeme, removeMeme } from '../mocks/repositoryMeme'
+import { getMemes, addMeme, removeMeme } from '../mocks/memeRepository'
 
 export default Vue.extend({
   name: 'MemesProvider',

@@ -8,7 +8,7 @@
 import MemeTable from '@/components/Memes/HOC/MemeTable'
 
 export default {
-  name: 'table',
+  name: 'TableView',
   components: {
     MemeTable
   }

@@ -1,19 +1,23 @@
 <template>
   <memes-provider v-slot="memesProvider">
-    <div class="c-meme-table">
-      <button @click="memesProvider.actions.add">Add</button>
-    </div>
+    <twitter-provider v-slot="twitterProvider">
+      <div class="c-meme-table">
+        <button @click="memesProvider.actions.add">Add</button>
+      </div>
+    </twitter-provider>
   </memes-provider>
 </template>
 
 <script>
 import Vue from 'vue'
 import MemesProvider from './MemesProvider'
+import TwitterProvider from './TwitterProvider'
 
 export default Vue.extend({
   name: 'MemeTable',
   components: {
-    MemesProvider
+    MemesProvider,
+    TwitterProvider
   },
   data() {
     return {
