@@ -14,13 +14,21 @@ export default createComponent({
     const state = reactive({
       pageLoading: false
     })
+
     const memeRepository = useMemeRepository()
     const twitterService = useTwitterService()
 
     return {
       state,
-      memeRepository,
-      twitterService
+      memes: {
+        list: memeRepository.list,
+        add: memeRepository.add,
+        remove: memeRepository.remove
+      },
+      tweets: {
+        feed: twitterService.feed,
+        postTweet: twitterService.tweet
+      }
     }
   },
   created() {
