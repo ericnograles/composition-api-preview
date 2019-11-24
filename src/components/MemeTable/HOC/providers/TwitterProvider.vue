@@ -6,7 +6,7 @@
 
 <script>
 import Vue from 'vue'
-import { getFeed, tweet } from '../mocks/twitterService'
+import { getFeed, tweet } from '../../mocks/twitterService'
 
 export default Vue.extend({
   name: 'TwitterProvider',

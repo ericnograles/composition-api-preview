@@ -10,8 +10,8 @@
 
 <script>
 import Vue from 'vue'
-import MemesProvider from './MemesProvider'
-import TwitterProvider from './TwitterProvider'
+import MemesProvider from './providers/MemesProvider'
+import TwitterProvider from './providers/TwitterProvider'
 
 export default Vue.extend({
   name: 'MemeTable',
