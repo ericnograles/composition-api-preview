@@ -42,7 +42,7 @@ export default Vue.extend({
   },
   methods: {
     async list() {
-      console.log('[HOC]: list')
+      console.log('[MembersProvider]: list')
       try {
         this.loading = true
         const { items } = await getMemes()
@@ -54,7 +54,7 @@ export default Vue.extend({
       }
     },
     async add(obj) {
-      console.log('[HOC]: add')
+      console.log('[MembersProvider]: add')
       try {
         this.loading = true
         const { items } = await addMeme(obj)
@@ -66,7 +66,7 @@ export default Vue.extend({
       }
     },
     async remove(id) {
-      console.log('[HOC]: remove')
+      console.log('[MembersProvider]: remove')
       try {
         this.loading = true
         const { items } = await removeMeme(id)

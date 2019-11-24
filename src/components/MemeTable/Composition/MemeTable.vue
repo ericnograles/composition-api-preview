@@ -1,5 +1,9 @@
 <template>
-  <div class="c-meme-table"></div>
+  <div class="c-meme-table">
+    <button @click="listMemes">
+      List Memes
+    </button>
+  </div>
 </template>
 
 <script>
