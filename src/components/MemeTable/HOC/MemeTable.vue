@@ -1,6 +1,16 @@
 <template>
-  <memes-provider v-slot="{ state: memesState, actions: memesActions }">
-    <twitter-provider v-slot="{ state: twitterState, actiosn: twitterActions }">
+  <memes-provider
+    v-slot="{
+      state: memesState,
+      actions: memesActions
+    }"
+  >
+    <twitter-provider
+      v-slot="{
+        state: twitterState,
+        actions: twitterActions
+      }"
+    >
       <div class="c-meme-table">
         <button @click="memesActions.list">
           List Memes
