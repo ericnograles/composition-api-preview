@@ -20,15 +20,13 @@ export default createComponent({
 
     return {
       state,
-      memes: {
-        list: memeRepository.list,
-        add: memeRepository.add,
-        remove: memeRepository.remove
-      },
-      tweets: {
-        feed: twitterService.feed,
-        postTweet: twitterService.tweet
-      }
+      memes: memeRepository.state.items,
+      tweets: twitterService.state.tweets,
+      listMemes: memeRepository.list,
+      addMeme: memeRepository.add,
+      removeMeme: memeRepository.remove,
+      getTwitterFeed: twitterService.feed,
+      postTweet: twitterService.tweet
     }
   },
   created() {
