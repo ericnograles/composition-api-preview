@@ -6,7 +6,7 @@ const feed = state => async () => {
   try {
     state.loading = true
     const tweets = await getFeed()
-    state.tweets = tweets
+    state.items = tweets
   } catch (err) {
     state.errors.feed = err
   } finally {
@@ -28,7 +28,7 @@ const tweet = state => async tweetObj => {
 
 export default function useTwitterService() {
   const state = reactive({
-    tweets: [],
+    items: [],
     loading: false,
     errors: {
       feed: null,
