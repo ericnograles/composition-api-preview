@@ -1,164 +1,192 @@
 [
   {
-    "id": 1,
-    "regex": "(^I don't (?:always|normally|usually) .+) (but when I do,? .+$)",
-    "img": "most_interesting.jpg",
-    "test": "I don't always test my code, but when I do, I do it in production."
+    "title": "Angry",
+    "image": "http://imgur.com/kH6o0mN.png",
+    "id": 1
   },
   {
-    "id": 2,
-    "regex": "^([\\w:]+(?: [\\w:]+)?) (all the [\\w:]+s)[!\\.]*$",
-    "img": "all_the_things.jpg",
-    "test": "Refactor all the things!"
+    "title": "Aww Yeah",
+    "image": "http://imgur.com/vTSZ6CG.png",
+    "id": 2
   },
   {
-    "id": 3,
-    "regex": "(^one does not simply) (.+$)",
-    "img": "boromir.jpg",
-    "test": "One does not simply meme in IRC."
+    "title": "Beer Guy",
+    "image": "http://imgur.com/hGED0m9.png",
+    "id": 3
   },
   {
-    "id": 4,
-    "regex": "(^not sure if [^\\|]+)(?: \\|)? (or .+$)",
-    "img": "fry.png",
-    "test": "Not sure if this is working, or is awesome."
+    "title": "Cereal Guy",
+    "image": "http://imgur.com/SjnMMhd.png",
+    "id": 4
   },
   {
-    "id": 5,
-    "regex": "(^yo,? (?:dawg|dog)[\\.,]* I hea?rd (?:you|u) like .+) (so (?:i|we) .+$)",
-    "img": "xzibit.jpg",
-    "test": "Yo dawg I herd you like regex. so we put a regex in yo regex so you can match while you match."
+    "title": "Cereal Spitting",
+    "image": "http://imgur.com/rdw32yx.png",
+    "id": 5
   },
   {
-    "id": 6,
-    "regex": "(^.+) (is too damn .+[!\\.]?$)",
-    "img": "too_damn_high.jpg",
-    "test": "The amount of memes in this channel is too damn high!"
+    "title": "Challenge Accepted",
+    "image": "http://imgur.com/xHcS2LF.png",
+    "id": 6
   },
   {
-    "id": 7,
-    "regex": "^(brace yourselves)[, ]+(.+ (?:is|are) coming)[!\\.]?$",
-    "img": "ned_stark.jpg",
-    "test": "Brace yourselves the memes are coming."
+    "title": "Clean Fuck Yea",
+    "image": "http://imgur.com/DRd0yKE.png",
+    "id": 7
   },
   {
-    "id": 8,
-    "regex": "(^what if) (.+[\\?!]+$)",
-    "img": "conspiracy_keanu.jpg",
-    "test": "What if space nachos?!"
+    "title": "Concentrated",
+    "image": "http://imgur.com/t9uwvai.png",
+    "id": 8
   },
   {
-    "id": 9,
-    "regex": "(^.+) (and you should feel bad\\.?$)",
-    "img": "you_should_feel_bad.jpg",
-    "test": "This meme is bad; and you should feel bad."
+    "title": "Derrrp",
+    "image": "http://imgur.com/kBSZgbG.png",
+    "id": 9
   },
   {
-    "id": 10,
-    "regex": "(^.+) (y u no .+$)",
-    "img": "y_u_no.jpg",
-    "test": "IRC y u no do memes yourself?"
+    "title": "Determined",
+    "image": "http://imgur.com/CATjyHj.png",
+    "id": 10
   },
   {
-    "id": 11,
-    "regex": "(^am i the only one around here) (.+$)",
-    "img": "walter.jpg",
-    "test": "Am I the only one around here who gives a shit about the rules?!"
+    "title": "Dude Come On",
+    "image": "http://imgur.com/8Tkr6ld.png",
+    "id": 11
   },
   {
-    "id": 12,
-    "regex": "(^.+) (so hot right now[\\.!]*$)",
-    "img": "mugatu.jpg",
-    "test": "Memes, so hot right now."
+    "title": "EWBTE",
+    "image": "http://imgur.com/ZaSaYAK.png",
+    "id": 12
   },
   {
-    "id": 13,
-    "regex": "(^.+) (is strong with this one[!\\.]*$)",
-    "img": "emperor.jpg",
-    "test": "The force is strong with this one."
+    "title": "Excited Troll",
+    "image": "http://imgur.com/CFLPW9U.png",
+    "id": 13
   },
   {
-    "id": 14,
-    "regex": "(^this is) (.+!$)",
-    "img": "sparta.jpg",
-    "test": "This is IRC!"
+    "title": "Fap Fap",
+    "image": "http://imgur.com/NImikb7.png",
+    "id": 14
   },
   {
-    "id": 15,
-    "regex": "(.+) (\\w+ go(?:es)? to (?:eleven|11))!?$",
-    "img": "goes_to_eleven.jpg",
-    "test": "The memes, they go to eleven!"
+    "title": "Forever Alone",
+    "image": "http://imgur.com/4L89AMP.png",
+    "id": 15
   },
   {
-    "id": 16,
-    "regex": "^()(fantastic)!*$",
-    "img": "fantastic-doctor.jpg",
-    "test": "fantastic!"
+    "title": "Forever Alone Excited",
+    "image": "http://imgur.com/NyEoz2g.png",
+    "id": 16
   },
   {
-    "id": 17,
-    "regex": "(^enough with) (.+!$)",
-    "img": "batman-slap.jpg",
-    "test": "Enough with the memes!"
+    "title": "Fuck Yea",
+    "image": "http://imgur.com/Cq6w7Rd.png",
+    "id": 17
   },
   {
-    "id": 18,
-    "regex": "(^nobody expects) (.+$)",
-    "img": "inquisition.jpg",
-    "test": "Nobody expects a pull request!"
+    "title": "Fuck Yea Female",
+    "image": "http://imgur.com/WMgvwaq.png",
+    "id": 18
   },
   {
-    "id": 19,
-    "regex": "(^.+ (?:is|are) better), (no .+ (?:is|are) better[!\\.])",
-    "img": "shampoo-is-better.jpg",
-    "test": "Shampoo is better, no conditioner is better!"
+    "title": "Full Panel",
+    "image": "http://imgur.com/iN5P0r4.png",
+    "id": 19
   },
   {
-    "id": 20,
-    "regex": "(^if .+) (I would be so happy[!\\.]?)$",
-    "img": "craig-happy.jpg",
-    "test": "If it was warmer, I would be so happy"
+    "title": "Happy",
+    "image": "http://imgur.com/JqhcMU4.png",
+    "id": 20
   },
   {
-    "id": 21,
-    "regex": "(.+) (over [0-9]+[\\.!]*)$",
-    "img": "over_9000.jpg",
-    "test": "His karma, it's over 9000!"
+    "title": "Hehehe",
+    "image": "http://imgur.com/U9GK6jL.png",
+    "id": 21
   },
   {
-    "id": 22,
-    "regex": "^(and then (?:we|I) told (?:him|her|them),?) (.+)$",
-    "img": "laughing-men.jpg",
-    "test": "And then we told him we had consensus!"
+    "title": "Laughing",
+    "image": "http://imgur.com/wJUtNXR.png",
+    "id": 22
   },
   {
-    "id": 23,
-    "regex": "^(.+ (?:is|are)(?: ?n['o]?t) the .+) (you'?re looking for)",
-    "img": "kenobi.gif",
-    "test": "These are not the droids you're looking for"
+    "title": "Me Gusta",
+    "image": "http://imgur.com/6otWkQZ.png",
+    "id": 23
   },
   {
-    "id": 24,
-    "regex": "^(.+) ([^ ]+ kermit panic\\?*)$",
-    "img": "kermit-panic.gif",
-    "test": "did you immediately kermit panic?"
+    "title": "Milk",
+    "image": "http://imgur.com/bxMhEKZ.png",
+    "id": 24
   },
   {
-    "id": 25,
-    "regex": "^([^,]+),? (panic!+?)$",
-    "img": "kermit-panic.gif",
-    "test": "ok, panic!!"
+    "title": "Newspaper Guy",
+    "image": "http://imgur.com/MhbPTSQ.png",
+    "id": 25
   },
   {
-    "id": 26,
-    "regex": "([^\\|]+)(?: \\|)? (I will find .+$)",
-    "img": "taken.jpg",
-    "test": "I don't know who you are. I will find you and add you to my LinkedIn."
+    "title": "Okay",
+    "image": "http://imgur.com/X6niVYQ.png",
+    "id": 26
   },
   {
-    "id": 27,
-    "regex": "^(i .+),? (i am the .+)$",
-    "img": "i_am_the_law.jpg",
-    "test": "I can't break the cloud, I am the cloud!"
+    "title": "Original Rage",
+    "image": "http://imgur.com/CD0nLh8.png",
+    "id": 27
+  },
+  {
+    "title": "Original Troll",
+    "image": "http://imgur.com/sV4AReH.png",
+    "id": 28
+  },
+  {
+    "title": "Poker Face",
+    "image": "http://imgur.com/EFHsGkJ.png",
+    "id": 29
+  },
+  {
+    "title": "Prrrr",
+    "image": "http://imgur.com/gXmsig6.png",
+    "id": 30
+  },
+  {
+    "title": "Smile",
+    "image": "http://imgur.com/Bp2y4zT.png",
+    "id": 31
+  },
+  {
+    "title": "Thoughtful",
+    "image": "http://imgur.com/HdmBrwX.png",
+    "id": 32
+  },
+  {
+    "title": "Troll Dad Full",
+    "image": "http://imgur.com/Mgyz87x.png",
+    "id": 33
+  },
+  {
+    "title": "Troll Dad Jump",
+    "image": "http://imgur.com/PFzOfO7.png",
+    "id": 34
+  },
+  {
+    "title": "Wait A Minute",
+    "image": "http://imgur.com/rxlv8TX.png",
+    "id": 35
+  },
+  {
+    "title": "What",
+    "image": "http://imgur.com/0JmUzko.png",
+    "id": 36
+  },
+  {
+    "title": "Why With Hands",
+    "image": "http://imgur.com/gEZW60M.png",
+    "id": 37
+  },
+  {
+    "title": "YUNO",
+    "image": "http://imgur.com/uXKy3RJ.png",
+    "id": 38
   }
 ]
