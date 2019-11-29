@@ -1,4 +1,4 @@
-import { reactive } from '@vue/composition-api'
+import { reactive, toRefs } from '@vue/composition-api'
 import { getFeed, tweet as postTweet } from '../../mocks/twitterService'
 
 const feed = state => async () => {
@@ -6,7 +6,7 @@ const feed = state => async () => {
   try {
     state.loading = true
     const tweets = await getFeed()
-    state.items = tweets
+    state.items.value = tweets
   } catch (err) {
     state.errors.feed = err
   } finally {
@@ -27,14 +27,16 @@ const tweet = state => async tweetObj => {
 }
 
 export default function useTwitterService() {
-  const state = reactive({
-    items: [],
-    loading: false,
-    errors: {
-      feed: null,
-      tweet: null
-    }
-  })
+  const state = toRefs(
+    reactive({
+      items: [],
+      loading: false,
+      errors: {
+        feed: null,
+        tweet: null
+      }
+    })
+  )
 
   return {
     state,
