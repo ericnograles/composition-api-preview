@@ -8,7 +8,7 @@ const list = state => async () => {
     const { items } = await getMemes()
     state.items.value = items
   } catch (err) {
-    state.errors.list = err
+    state.errors.list.value = err
   } finally {
     state.loading = false
   }
@@ -21,7 +21,7 @@ const add = state => async obj => {
     const { items } = await addMeme(obj)
     state.items.value = items
   } catch (err) {
-    state.errors.add = err
+    state.errors.add.value = err
   } finally {
     state.loading = false
   }
@@ -34,7 +34,7 @@ const remove = state => async id => {
     const { items } = await removeMeme(id)
     state.items.value = items
   } catch (err) {
-    state.errors.remove = err
+    state.errors.remove.value = err
   } finally {
     state.loading = false
   }

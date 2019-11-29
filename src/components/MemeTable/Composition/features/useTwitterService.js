@@ -8,7 +8,7 @@ const feed = state => async () => {
     const tweets = await getFeed()
     state.items.value = tweets
   } catch (err) {
-    state.errors.feed = err
+    state.errors.feed.value = err
   } finally {
     state.loading = false
   }
@@ -20,7 +20,7 @@ const tweet = state => async tweetObj => {
     state.loading = true
     await postTweet(tweetObj)
   } catch (err) {
-    state.errors.tweet = err
+    state.errors.tweet.value = err
   } finally {
     state.loading = false
   }
