@@ -49,7 +49,9 @@ export default createComponent({
     return {
       state,
       memes: memeRepository.state.items,
+      memesLoading: memeRepository.state.loading,
       tweets: twitterService.state.items,
+      tweetsLoading: twitterService.state.loading,
       listMemes: memeRepository.list,
       addMeme: memeRepository.add,
       removeMeme: memeRepository.remove,
