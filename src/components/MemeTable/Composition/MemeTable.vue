@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { reactive } from '@vue/composition-api'
+import { reactive, onMounted, onUnmounted } from '@vue/composition-api'
 import { createComponent } from '@vue/composition-api'
 import useMemeRepository from './features/useMemeRepository'
 import useTwitterService from './features/useTwitterService'
@@ -28,10 +28,18 @@ export default createComponent({
     const memeRepository = useMemeRepository()
     const twitterService = useTwitterService()
 
+    onMounted(() => {
+      console.log('[MemeTable]: onMounted')
+    })
+
+    onUnmounted(() => {
+      console.log('[MemeTable]: onUnmounted')
+    })
+
     return {
       state,
       memes: memeRepository.state.items,
-      tweets: twitterService.state.tweets,
+      tweets: twitterService.state.items,
       listMemes: memeRepository.list,
       addMeme: memeRepository.add,
       removeMeme: memeRepository.remove,

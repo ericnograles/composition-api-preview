@@ -1,4 +1,4 @@
-import { reactive } from '@vue/composition-api'
+import { reactive, onMounted, onUnmounted } from '@vue/composition-api'
 import { getMemes, addMeme, removeMeme } from '../../mocks/memeRepository'
 
 const list = state => async () => {
@@ -49,6 +49,14 @@ export default function useMemeRepository() {
       list: null
     },
     loading: false
+  })
+
+  onMounted(() => {
+    console.log('[useMemeRepository]: onMounted')
+  })
+
+  onUnmounted(() => {
+    console.log('[useMemeRepository]: onUnmounted')
   })
 
   return {
