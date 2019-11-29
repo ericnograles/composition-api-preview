@@ -4,10 +4,20 @@
       <div />
       <div />
     </div>
-    <div class="c-meme-table__row c-meme-table__row--item">
-      <div />
-      <div />
-      <div />
+    <div
+      v-for="meme in memes"
+      :key="meme.id"
+      class="c-meme-table__row c-meme-table__row--item"
+    >
+      <div>
+        {{ meme.title }}
+      </div>
+      <div>
+        <img :src="meme.image" :alt="meme.title" />
+      </div>
+      <div>
+        TODO: Controls
+      </div>
     </div>
   </div>
 </template>
@@ -47,8 +57,11 @@ export default createComponent({
       postTweet: twitterService.tweet
     }
   },
-  created() {
+  async created() {
     console.log('[MemeTable]: Created')
+    this.pageLoading = true
+    await this.listMemes()
+    this.pageLoading = false
   }
 })
 </script>
