@@ -18,7 +18,7 @@
         {{ meme.title }}
       </div>
       <div class="flex flex-col justify-center items-start p-2">
-        <img class="c-meme-table__image" :src="meme.image" :alt="meme.title" />
+        <img class="w-12 h-auto" :src="meme.image" :alt="meme.title" />
       </div>
       <div class="flex flex-col justify-center items-end p-2">
         <a
@@ -95,14 +95,5 @@ export default createComponent({
 
 .c-meme-table__row--item {
   grid-template-columns: [title] 0.5fr [img] 0.2fr [controls] 0.3fr;
-}
-
-.c-meme-table__image {
-  height: 32px;
-  width: auto;
-}
-
-.c-meme-table__content {
-  padding: 8px;
 }
 </style>
