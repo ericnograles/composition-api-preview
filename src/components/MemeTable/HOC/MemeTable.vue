@@ -1,11 +1,13 @@
 <template>
   <memes-provider
+    ref="memesProvider"
     v-slot="{
       state: memesState,
       actions: memesActions
     }"
   >
     <twitter-provider
+      ref="twitterProvider"
       v-slot="{
         state: twitterState,
         actions: twitterActions
