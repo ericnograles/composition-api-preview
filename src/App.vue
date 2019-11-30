@@ -2,7 +2,9 @@
   <div id="app" class="container mx-auto">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/table/mixin">Mixin</router-link> |
+      <router-link to="/table/hoc">Higher Order Component</router-link> |
+      <router-link to="/table/composition">Composition API</router-link>
     </div>
     <router-view />
   </div>

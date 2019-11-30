@@ -13,10 +13,12 @@
         {{ meme.title }}
       </div>
       <div>
-        <img :src="meme.image" :alt="meme.title" />
+        <img class="c-meme-table__image" :src="meme.image" :alt="meme.title" />
       </div>
       <div>
-        TODO: Controls
+        <a href="#" @click="removeMeme(meme.id)">
+          Remove
+        </a>
       </div>
     </div>
   </div>
@@ -83,5 +85,10 @@ export default createComponent({
 
 .c-meme-table__row--item {
   grid-template-columns: [title] 1fr [img] 1fr [controls] 40px;
+}
+
+.c-meme-table__image {
+  height: 48px;
+  width: auto;
 }
 </style>

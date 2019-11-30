@@ -11,22 +11,39 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
     path: '/table',
     name: 'table',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Table.vue')
+      import(/* webpackChunkName: "table" */ '../views/Table.vue'),
+    children: [
+      {
+        name: 'table-hoc',
+        path: 'hoc',
+        component: () =>
+          import(
+            /* webpackChunkName: "table-hoc" */ '@/components/MemeTable/HOC/MemeTable.vue'
+          )
+      },
+      {
+        name: 'table-hoc',
+        path: 'mixin',
+        component: () =>
+          import(
+            /* webpackChunkName: "table-mixin" */ '@/components/MemeTable/Mixin/MemeTable.vue'
+          )
+      },
+      {
+        name: 'table-composition',
+        path: 'composition',
+        component: () =>
+          import(
+            /* webpackChunkName: "table-composition" */ '@/components/MemeTable/Composition/MemeTable.vue'
+          )
+      }
+    ]
   }
 ]
 
