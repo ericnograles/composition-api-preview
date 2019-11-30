@@ -4,6 +4,7 @@ export default {
   name: 'TwitterMixin',
   data() {
     return {
+      // items: [],
       tweets: [],
       loading: false,
       errors: {

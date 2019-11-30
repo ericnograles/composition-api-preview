@@ -39,11 +39,7 @@
               <a
                 href="#"
                 class="text-blue-500 hover:text-blue-800"
-                @click="
-                  twitterActions.tweet({
-                    message: `Check out ${meme.title}: ${meme.image}`
-                  })
-                "
+                @click="tweetMeme(meme)"
               >
                 Tweet
               </a>
@@ -80,6 +76,13 @@ export default Vue.extend({
   },
   created() {
     console.log('[MemeTable]: Created')
+  },
+  methods: {
+    tweetMeme(meme) {
+      this.$refs.twitterProvider.tweet({
+        message: `Check out ${meme.title}: ${meme.image}`
+      })
+    }
   }
 })
 </script>
