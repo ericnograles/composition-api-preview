@@ -4,5 +4,7 @@ export function getFeed() {
 }
 
 export function tweet(obj) {
-  console.log('[twitterService]: tweet')
+  console.group('[twitterService]: tweet')
+  console.log(obj)
+  console.groupEnd()
 }

@@ -24,6 +24,13 @@
         <a
           href="#"
           class="text-blue-500 hover:text-blue-800"
+          @click="tweetMeme(meme)"
+        >
+          Tweet
+        </a>
+        <a
+          href="#"
+          class="text-blue-500 hover:text-blue-800"
           @click="removeMeme(meme.id)"
         >
           Remove
@@ -68,6 +75,13 @@ export default createComponent({
       removeMeme: memeRepository.remove,
       getTwitterFeed: twitterService.feed,
       postTweet: twitterService.tweet
+    }
+  },
+  methods: {
+    tweetMeme(meme) {
+      this.postTweet({
+        message: `Check out ${meme.title}: ${meme.image}`
+      })
     }
   },
   async created() {

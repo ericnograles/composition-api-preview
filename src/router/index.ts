@@ -28,7 +28,7 @@ const routes = [
           )
       },
       {
-        name: 'table-hoc',
+        name: 'table-mixin',
         path: 'mixin',
         component: () =>
           import(
