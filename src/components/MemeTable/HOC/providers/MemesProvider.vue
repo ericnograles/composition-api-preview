@@ -21,8 +21,9 @@ export default Vue.extend({
       loading: false
     }
   },
-  created() {
+  async created() {
     console.log('[MemesProvider]: Created')
+    await this.list()
   },
   computed: {
     state() {
