@@ -6,7 +6,12 @@
 
 <script>
 import Vue from 'vue'
-import { getMemes, addMeme, removeMeme } from '../../mocks/memeRepository'
+import {
+  getMemes,
+  addMeme,
+  removeMeme,
+  refreshMemes
+} from '../../mocks/memeRepository'
 
 export default Vue.extend({
   name: 'MemesProvider',
@@ -23,7 +28,7 @@ export default Vue.extend({
   },
   async created() {
     console.log('[MemesProvider]: Created')
-    await this.list()
+    await this.refresh()
   },
   computed: {
     state() {
@@ -35,6 +40,7 @@ export default Vue.extend({
     },
     actions() {
       return {
+        refresh: this.refresh,
         list: this.list,
         add: this.add,
         remove: this.remove
@@ -42,6 +48,18 @@ export default Vue.extend({
     }
   },
   methods: {
+    async refresh() {
+      console.log('[MembersProvider]: refresh')
+      try {
+        this.loading = true
+        const { items } = await refreshMemes()
+        this.items = items
+      } catch (err) {
+        this.errors.list = err
+      } finally {
+        this.loading = false
+      }
+    },
     async list() {
       console.log('[MembersProvider]: list')
       try {

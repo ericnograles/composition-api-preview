@@ -6,7 +6,7 @@
       class="c-meme-table__row c-meme-table__row--header border-solid border-b-2 border-gray-300"
     >
       <div class="flex justify-end p-2">
-        <a href="#" @click="list">Refresh Memes</a>
+        <a href="#" @click="refresh">Refresh Memes</a>
       </div>
     </div>
     <div

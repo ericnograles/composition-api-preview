@@ -6,7 +6,7 @@
       class="c-meme-table__row c-meme-table__row--header border-solid border-b-2 border-gray-300"
     >
       <div class="flex justify-end p-2">
-        <a href="#" @click="listMemes">Refresh Memes</a>
+        <a href="#" @click="refreshMemes">Refresh Memes</a>
       </div>
     </div>
     <div
@@ -70,6 +70,7 @@ export default createComponent({
       memesLoading: memeRepository.state.loading,
       tweets: twitterService.state.items,
       tweetsLoading: twitterService.state.loading,
+      refreshMemes: memeRepository.refresh,
       listMemes: memeRepository.list,
       addMeme: memeRepository.add,
       removeMeme: memeRepository.remove,

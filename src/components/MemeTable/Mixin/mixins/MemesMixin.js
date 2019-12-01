@@ -1,4 +1,9 @@
-import { getMemes, addMeme, removeMeme } from '../../mocks/memeRepository'
+import {
+  getMemes,
+  addMeme,
+  removeMeme,
+  refreshMemes
+} from '../../mocks/memeRepository'
 
 export default {
   name: 'MemesMixin',
@@ -8,7 +13,8 @@ export default {
       errors: {
         add: null,
         remove: null,
-        list: null
+        list: null,
+        refresh: null
       },
       loading: false
     }
@@ -33,6 +39,18 @@ export default {
     }
   },
   methods: {
+    async refresh() {
+      console.log('[MemesMixin]: refresh')
+      try {
+        this.loading = true
+        const { items } = await refreshMemes()
+        this.items = items
+      } catch (err) {
+        this.errors.refresh = err
+      } finally {
+        this.loading = false
+      }
+    },
     async list() {
       console.log('[MemesMixin]: list')
       try {

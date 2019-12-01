@@ -1,5 +1,23 @@
 import { reactive, onMounted, onUnmounted, toRefs } from '@vue/composition-api'
-import { getMemes, addMeme, removeMeme } from '../../mocks/memeRepository'
+import {
+  getMemes,
+  addMeme,
+  removeMeme,
+  refreshMemes
+} from '../../mocks/memeRepository'
+
+const refresh = state => async () => {
+  console.log('[useMemeRepository]: refresh')
+  try {
+    state.loading = true
+    const { items } = await refreshMemes()
+    state.items.value = items
+  } catch (err) {
+    state.errors.list.value = err
+  } finally {
+    state.loading = false
+  }
+}
 
 const list = state => async () => {
   console.log('[useMemeRepository]: list')
@@ -63,6 +81,7 @@ export default function useMemeRepository() {
 
   return {
     state,
+    refresh: refresh(state),
     list: list(state),
     add: add(state),
     remove: remove(state)
