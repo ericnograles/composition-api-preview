@@ -2,7 +2,7 @@ import memes from './memes'
 let items = memes
 
 export function getMemes() {
-  return { items }
+  return { items: memes }
 }
 
 export function addMeme(obj) {
