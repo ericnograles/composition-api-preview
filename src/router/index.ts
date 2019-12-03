@@ -20,6 +20,14 @@ const routes = [
       import(/* webpackChunkName: "table" */ '../views/Table.vue'),
     children: [
       {
+        name: 'table-options-api',
+        path: 'options_api',
+        component: () =>
+          import(
+            /* webpackChunkName: "table-hoc" */ '@/components/MemeTable/OptionsAPI/MemeTable.vue'
+          )
+      },
+      {
         name: 'table-hoc',
         path: 'hoc',
         component: () =>
