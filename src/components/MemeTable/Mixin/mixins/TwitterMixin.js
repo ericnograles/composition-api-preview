@@ -32,6 +32,10 @@ export default {
     }
   },
   methods: {
+    // TODO: Uncomment to show Mixin conflict
+    // refresh() {
+    //   console.log('[TwitterMixin]: refresh')
+    // },
     async feed() {
       console.log('[TwitterMixin]: feed')
       try {
